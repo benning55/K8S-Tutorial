@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce # can read and write by single node (node is in pod but 1 pod can have many node)
+  resources:
+    requests:
+      storage: 1Gi
